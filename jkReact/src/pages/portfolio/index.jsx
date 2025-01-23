@@ -11,15 +11,15 @@ function Page() {
         <div className="w1200">
           <div className="container">
               <div className="listTab">
-                  list filter area
+                  {/* list filter area */}
                   <ul>
-                    <li data-type="all">All</li>
-                    <li data-type="pc">PC</li>
-                    <li data-type="mo">Mobile</li>
-                    <li data-type="res">Responsive</li>
-                    <li data-type="wa">Web Accessibility</li>
-                    <li data-type="cf">Cafe24</li>
-                    <li data-type="cf">Maintanance</li>
+                    <li data-type="all" className="active">All <span className="cnt">(<b>11</b>)</span></li>
+                    <li data-type="pc">PC <span className="cnt">(<b>11</b>)</span></li>
+                    <li data-type="mo">Mobile <span className="cnt">(<b>11</b>)</span></li>
+                    <li data-type="res">Responsive <span className="cnt">(<b>11</b>)</span></li>
+                    <li data-type="wa">Web Accessibility <span className="cnt">(<b>11</b>)</span></li>
+                    <li data-type="cf">Cafe24 <span className="cnt">(<b>11</b>)</span></li>
+                    <li data-type="cf">Maintanance <span className="cnt">(<b>11</b>)</span></li>
                   </ul>
               </div>
 
@@ -28,22 +28,22 @@ function Page() {
                     {/* start area of portfolio */}
                     <li className="pc">
                       <Link to="https://www.justintime-capital.com/" target="_blank">
-                        <div className="">
-                          <div className="">
+                        <div className="cardCover">
+                          <div className="cardInner">
                             {/* <img src="img/sc/just.png" className=""> */}
-                            <div className="">
-                              <div className="">
+                            <div className="flipCover">
+                              <div className="flipInner">
                                 저스트인타임 대부<br/>
                                 역할 : 퍼블리싱 PL
                               </div>
                             </div>
-                            <span className="">
-                              <span className="">
+                            <span className="titleCover">
+                              <span className="titleInner">
                                 저스트인타임 대부
                               </span>
                             </span>
-                            <span className="">
-                              <span className=""><i className=""></i></span>
+                            <span className="flipIcon">
+                              <span className="icoFrame"><i className="icoSelf"></i></span>
                             </span>
                           </div>
                         </div>

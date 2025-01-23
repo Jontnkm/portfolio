@@ -49,15 +49,15 @@ function Lnb () {
     <>
 		<div className="w1600">
 			<ul>
-				<li className="mList">
+				{/* <li className="mList">
 					<Link to="http://jkproject.kr/portfolio.html" target="_blank">Portfolio</Link>
-				</li>
+				</li> */}
 				{
-					// GnbData.map((list, index)=>{
-					// const isActive = location.pathname === list.path;
-					// if (list.path === "/") return null;
-					// return <li key={index} className="mList" ><button className={`btn-depth1 ${isActive ? "active" : ""} `}  onClick={()=> movePage(list.path)}>{list.txt}</button></li>;
-					// })
+					GnbData.map((list, index)=>{
+					const isActive = location.pathname === list.path;
+					if (list.path === "/") return null;
+					return <li key={index} className="mList" ><button className={`btn-depth1 ${isActive ? "active" : ""} `}  onClick={()=> movePage(list.path)}>{list.txt}</button></li>;
+					})
 				}
 			</ul>
 		</div>

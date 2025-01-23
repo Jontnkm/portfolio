@@ -36,7 +36,7 @@ html, body, #root {
     position:absolute; top:10px; left:0; z-index:2; width:100%;
     
     @include tab {
-        position:relative; top:0;
+        position:absolute; top:0; background:#000;
     }
     div {
         a {
@@ -61,12 +61,33 @@ html, body, #root {
             margin-top:30px; transition:all 0.4s; position:relative; width:max-content; margin-left:-500px; opacity:0; transition:all 1.5s;
 
             @include tab {
-                margin:10px auto 0;
+                margin:150px auto 0; width:100%;
             }
 
             button {
                 display:inline-block; font-size:40px; font-weight:bold; color:#fff; transition:all 0.4s; position:relative;
 
+                &::after {
+                   content:''; position:absolute; bottom:-1px; left:0; width:0; background:#1b6adf; height:2px; transition:all 0.4s;
+                }
+                
+                &:hover {
+                    color: #1b6adf !important;
+
+                    &::after {
+                        width:100%;
+                    }
+                }
+            }
+
+            /*temporary use only before finish work of Portfolio*/
+            a {
+                display:inline-block; font-size:40px; font-weight:bold; color:#fff; transition:all 0.4s; position:relative;
+
+                @include tab {
+                    width:100%; text-align: center;
+                }
+                
                 &::after {
                    content:''; position:absolute; bottom:-1px; left:0; width:0; background:#1b6adf; height:2px; transition:all 0.4s;
                 }
@@ -76,6 +97,14 @@ html, body, #root {
 
                     &::after {
                         width:100%;
+                    }
+
+                    @include tab {
+                        color: #fff !important;
+
+                        &::after {
+                            content:none;
+                        }   
                     }
                 }
             }

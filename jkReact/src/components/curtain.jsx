@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 
 function Curtain () {
     useEffect(() => {
-
-        curtainOpen();
-
+        setTimeout(()=>{
+          curtainOpen();
+        },100);
     }, []);
 
     function curtainOpen() {
@@ -18,12 +18,12 @@ function Curtain () {
         const ct04 = document.querySelector(".curtain04");
 
         // console.log(win_w , win_h);
-        window.addEventListener("load", function(){
+        // window.addEventListener("load", function(){
           ct01.style.top = win_h + "px";
           ct02.style.left = win_w + "px";
           ct03.style.right = win_w + "px";
           ct04.style.bottom = win_h + "px";
-        })
+        // })
     }
     
   return (

@@ -84,7 +84,7 @@ input[type=checkbox] {
 }
 
 select {
-    -moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;  background:#fff url(../../common/images/icon_select.png) calc(100% - 9px) center no-repeat;
+    -moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;
 
     &::-ms-expand {
         display:none;

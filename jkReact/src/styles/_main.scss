@@ -1,0 +1,244 @@
+@use  './mixin' as *;
+
+html, body, #root {
+    width:100%; height:100%; position:relative;
+}
+
+/*common*/
+.w1600 {
+    width:100%; max-width:1600px; margin:0 auto;
+}
+
+.w1200 {
+    width:100%; max-width:1200px; margin:0 auto;
+}
+
+.w640 {
+    width:100%; max-width:640px; margin:0 auto;
+}
+
+.wrap {
+    width:100%; height:100%; position:relative; overflow:hidden;
+
+    .content {
+        width:100%; height:100%; position:relative;
+
+        @include tab {
+            overflow:hidden;
+        }
+    }
+}
+
+
+/*first_page_css*/
+
+.header {
+    position:absolute; top:10px; left:0; z-index:2; width:100%;
+    
+    @include tab {
+        position:relative; top:0;
+    }
+    div {
+        a {
+            display: block; padding:10px 0; box-sizing: border-box; width:140px;
+            
+            @include tab {
+                width:140px; margin:0 auto;
+            }
+        }
+    }
+}
+
+.web_menu {
+    position:absolute; bottom:230px; left:0; z-index:2; width:100%;
+
+    @include tab {
+        position:relative; bottom:auto; left:auto; z-index:2; width:100%;
+    }
+    
+    ul {
+        li {
+            margin-top:30px; transition:all 0.4s; position:relative; width:max-content; margin-left:-500px; opacity:0; transition:all 1.5s;
+
+            @include tab {
+                margin:10px auto 0;
+            }
+
+            button {
+                display:inline-block; font-size:40px; font-weight:bold; color:#fff; transition:all 0.4s; position:relative;
+
+                &::after {
+                   content:''; position:absolute; bottom:-1px; left:0; width:0; background:#1b6adf; height:2px; transition:all 0.4s;
+                }
+
+                &:hover {
+                    color: #1b6adf !important;
+
+                    &::after {
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mainVisual {
+    width:100%; height:100%; margin:0; padding:0; box-sizing:border-box; position:relative; background:#000; overflow:hidden; z-index:-1;
+    
+    @include tab {
+        overflow:visible; position:absolute; bottom:0px;
+    }
+
+    .vCont {
+        width:100%; height:100%; position:relative;
+        
+        @include tab {
+            width:100%; height:auto; position:absolute; bottom:-50px;
+        }
+        
+        img {
+            position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); margin-left:600px; width:1630px; animation: floatingOver 1s linear 0s infinite alternate;
+
+            @include pc {
+                position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); margin-left:450px;
+                animation: floatingPc 1s linear 0s infinite alternate;
+            }
+            @include tab {
+                position:relative; bottom:0px; left:50%; transform: translate(-50%,0); max-width:100%; margin:0px 0 0 70px;
+                animation: floatingTab 1s linear 0s infinite alternate;
+            }
+        }
+    }
+}
+
+@keyframes floatingOver {
+    0% {
+        top:630px;
+    }
+    100% {
+        top:650px;
+    }
+}
+
+@keyframes floatingPc {
+    0% {
+        top:470px;
+    }
+    100% {
+        top:490px;
+    }
+}
+
+@keyframes floatingTab {
+    0% {
+        top:0px;
+    }
+    100% {
+        top:10px;
+    }
+}
+/*opening_curtainc__call*/
+.curtain_call {
+    position:absolute; width:100%; height:100%; background:white; transition:all .8s;
+
+    &.curtain01 {z-index:99999; top:0; left:0; border-top:1px solid #dfdfdf;}
+    &.curtain02 {z-index:9999; top:0; left:0; border-left:1px solid #dfdfdf;}
+    &.curtain03 {z-index:999; top:0; right:0; border-right:1px solid #dfdfdf;}
+    &.curtain04 {z-index:99; bottom:0; left:0; border-bottom:1px solid #dfdfdf;}
+}
+
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    background: #EEE;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+    color: #222;
+    font-family: sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #8CF;
+    color: #222;
+  }
+  
+  .button:active,
+  .button.is-checked {
+    background-color: #28F;
+  }
+  
+  .button.is-checked {
+    color: white;
+  }
+  
+  .button:active {
+    box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+  }
+  
+  /* ---- button-group ---- */
+  
+  .button-group {
+    margin-bottom: 20px;
+  }
+  
+  .button-group:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .button-group .button {
+    float: left;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 1px;
+  }
+  
+  .button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+  .button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+  
+  /* ---- grid ---- */
+  
+  .grid {
+    border: 1px solid #333;
+  }
+  
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .element-item ---- */
+  
+  .grid-item {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 10px;
+    background: red;
+    color: white;
+    font-size: 50px;
+  }
+  
+  .grid-item--width2 { width: 210px; }
+  .grid-item--height2 { height: 210px; }
+  
+  .grid-item:nth-child(10n+0) { background: hsl(   0, 100%, 50%); }
+  .grid-item:nth-child(10n+1) { background: hsl(  36, 100%, 50%); }
+  .grid-item:nth-child(10n+2) { background: hsl(  72, 100%, 50%); }
+  .grid-item:nth-child(10n+3) { background: hsl( 108, 100%, 50%); }
+  .grid-item:nth-child(10n+4) { background: hsl( 144, 100%, 50%); }
+  .grid-item:nth-child(10n+5) { background: hsl( 180, 100%, 50%); }
+  .grid-item:nth-child(10n+6) { background: hsl( 216, 100%, 50%); }
+  .grid-item:nth-child(10n+7) { background: hsl( 252, 100%, 50%); }
+  .grid-item:nth-child(10n+8) { background: hsl( 288, 100%, 50%); }
+  .grid-item:nth-child(10n+9) { background: hsl( 324, 100%, 50%); }

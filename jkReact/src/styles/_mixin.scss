@@ -1,0 +1,33 @@
+// //반응형
+// @mixin media($breakpoint, $breakpoints:$breakpointText){
+//     @if map-has-key($breakpoints, $breakpoint){
+//         $breakpoint:map-get($breakpoints, $breakpoint);
+//     }
+
+//     @media screen and (max-width: #{$breakpoint}) {
+//         @content;
+//     }
+// }
+
+
+$bp-over : 1921px;
+$bp-pc : 1920px;
+$bp-tab : 1200px;
+
+@mixin over {
+    @media (min-width: #{$bp-over}) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (max-width: #{$bp-pc}) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: #{$bp-tab}) {
+        @content;
+    }
+}

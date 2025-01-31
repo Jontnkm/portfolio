@@ -68,10 +68,7 @@
                 display:flex; flex-flow: row wrap; align-items: flex-start ;justify-content: space-between; gap:20px; column-gap:20px;
 
                 > li {
-                    width:calc(calc(100% / 4) - 20px); overflow: hidden; margin-right:20px; margin-bottom:20px;
-                    img {
-                        max-width:100%;
-                    }
+                    width:calc(calc(100% / 4) - 20px); overflow: hidden; margin-right:20px; margin-bottom:20px; position:relative;
 
                     &.block {
                        display:block;
@@ -79,6 +76,52 @@
 
                     &.hidden {
                         display:none;
+                    }
+
+                    &.mo {max-height:350px;}
+
+                    > a {
+                        overflow:hidden;
+                        > img {
+                            max-width:100%;
+                        }
+
+                        > .dataCover {
+                            position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; padding: 20px; margin-left:-200px; transition:all 0.4s; z-index:3;
+                            > .siteJob {
+                                display:flex; flex-flow:column; align-items: flex-start; justify-content: center; position:relative; gap:10px; font-size:16px; color:#fff; font-weight:500; line-height:1.4; letter-spacing:-.0.3px;
+
+                                > span {
+                                    display:block; position:relative; padding-left:8px;
+
+                                    &::after {
+                                        content:''; position:absolute; top:7px; left:0; width:4px; height:4px; background:#fff; border-radius:50%; 
+                                    }
+                                }
+                            }
+                        }
+
+                        > .title {
+                            position:absolute; bottom:10px; left:10px; width:100%; font-size:18px; color:#fff; font-weight:500; z-index:3; transition:all 0.3s; text-align:left;
+                        }
+
+                        &::after {
+                            content:''; position:absolute; bottom:0; left:0; width:100%; height:50px; background:rgba(0,0,0,0.7); transition:all 0.2s; z-index:2;
+                        }
+
+                        &:hover {
+                            > .dataCover {
+                                margin-left:0;
+                            }
+
+                            > .title {
+                                opacity:0;
+                            }
+
+                            &::after {
+                                height:100%;
+                            }
+                        }
                     }
                 }
             }

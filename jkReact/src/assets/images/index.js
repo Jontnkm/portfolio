@@ -87,8 +87,12 @@ import toto from "@/assets/images/pf/toto.png"
 import woomyun from "@/assets/images/pf/woomyun.png"
 import yk from "@/assets/images/pf/yk.png"
 import yk_m from "@/assets/images/pf/yk_m.png"
+import btv from "@/assets/images/pf/btv.png"
+import spowell from "@/assets/images/pf/spowell.png"
 
 export const pfImg = {
+    spowell,
+    btv,
     img2bcnc,
     img88olympic,
     img9988,

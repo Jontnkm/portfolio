@@ -23,7 +23,22 @@ function RouterDefault() {
         return (
           <Route key={route.path} path={route.path} element={
               <Layout>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={
+                  <div className="loadingBar">
+                    <div className='music'>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                      <div className='bar'></div>
+                    </div>
+                  </div>
+                  }>
                   <route.component />
                 </Suspense>
               </Layout>

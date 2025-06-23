@@ -49,9 +49,6 @@ function Lnb () {
     <>
 		<div className="w1600">
 			<ul>
-				{/* <li className="mList">
-					<Link to="http://jkproject.kr/portfolio.html" target="_blank">Portfolio</Link>
-				</li> */}
 				{
 					GnbData.map((list, index)=>{
 					const isActive = location.pathname === list.path;

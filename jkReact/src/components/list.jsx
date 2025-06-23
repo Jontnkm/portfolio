@@ -34,6 +34,7 @@ const List = () => {
 
     const handleFilterChange = (type) => {
         setFilterType(type);
+        console.log(type);
         if (masonryRef.current) {
             masonryRef.current.destroy();
             masonryRef.current = null;
@@ -82,6 +83,18 @@ const List = () => {
         listCount(); // 컴포넌트가 렌더링될 때마다 카운트 업데이트
     }, [filterType]);
 
+    // function setHeight() {
+    //     var img = document.querySelectorAll(".imgClss");
+
+    //     img.forEach(function(image){
+    //         var imgH = image.offsetHeight;
+    //         // console.log(imgH);
+    //         image.style.height = imgH + "px";
+    //     })
+    // }
+    
+    // setHeight();
+
     return (
         <>
             <div className="listTab">
@@ -99,8 +112,8 @@ const List = () => {
                 <ul className="gallery" ref={galleryRef}>
                 {/* start area of portfolio */}
                 <li className={`galList res wa ${filterType === 'total' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
-                    <Link to="https://www.justintime-capital.com/" target="_blank">
-                        <img src={pfImg.spowell} className="" />
+                    <Link to="https://spowell.kspo.or.kr" target="_blank">
+                        <img src={pfImg.spowell} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -114,7 +127,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' || filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="https://www.justintime-capital.com/" target="_blank">
-                        <img src={pfImg.btv} className="" />
+                        <img src={pfImg.btv} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -128,7 +141,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://www.justintime-capital.com/" target="_blank">
-                        <img src={pfImg.just} className="" />
+                        <img src={pfImg.just} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -142,7 +155,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://m.justintime-capital.com/" target="_blank">
-                        <img src={pfImg.mo_just} className="" />
+                        <img src={pfImg.mo_just} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -156,7 +169,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://sunnycapital.net/" target="_blank">
-                        <img src={pfImg.sunny} className="" />
+                        <img src={pfImg.sunny} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -170,7 +183,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://m.sunnycapital.net/" target="_blank">
-                        <img src={pfImg.mo_sunny} className="" />
+                        <img src={pfImg.mo_sunny} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -184,7 +197,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://barocredit.com/" target="_blank">
-                        <img src={pfImg.baro} className="" />
+                        <img src={pfImg.baro} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -198,7 +211,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://m.barocredit.com/" target="_blank">
-                        <img src={pfImg.mo_baro} className="" />
+                        <img src={pfImg.mo_baro} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -212,7 +225,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc wa ${filterType === 'total' || filterType === 'pc' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://adiga.kr/" target="_blank">
-                        <img src={pfImg.adiga} className="" />
+                        <img src={pfImg.adiga} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -226,7 +239,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://m.adiga.kr/" target="_blank">
-                        <img src={pfImg.m_adiga} className="" />
+                        <img src={pfImg.m_adiga} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프로젝트 팀 PL</span>
@@ -240,7 +253,7 @@ const List = () => {
                 </li>
                 <li className={`galList res wa ${filterType === 'total' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://nfa.kspo.or.kr/main.kspo" target="_blank">
-                        <img src={pfImg.nfa02} className="" />
+                        <img src={pfImg.nfa02} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">프론트 웹접근성 및 관리자페이지 작업 전담</span>
@@ -255,7 +268,7 @@ const List = () => {
                 {/* Maintanance & Web Accesability */}
                 <li className={`galList maintanance res wa ${filterType === 'total' || filterType === 'maintanance' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://kspo.or.kr/" target="_blank">
-                        <img src={pfImg.kspo} className="" />
+                        <img src={pfImg.kspo} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수 및 사이트 리뉴얼 작업</span>
@@ -270,7 +283,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res wa ${filterType === 'total' || filterType === 'maintanance' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://svoucher.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.sv} className="" />
+                        <img src={pfImg.sv} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -284,7 +297,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res wa ${filterType === 'total' || filterType === 'maintanance' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://dvoucher.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.dv} className="" />
+                        <img src={pfImg.dv} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -298,7 +311,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res wa ${filterType === 'total' || filterType === 'maintanance' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://spoinfo.or.kr/" target="_blank">
-                        <img src={pfImg.spoinfo} className="" />
+                        <img src={pfImg.spoinfo} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -312,7 +325,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance wa ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://sports.re.kr/" target="_blank">
-                        <img src={pfImg.kiss} className="" />
+                        <img src={pfImg.kiss} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -326,7 +339,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res wa ${filterType === 'total' || filterType === 'maintanance' || filterType === 'res' || filterType === 'wa' ? 'block' : 'hidden'}`}>
                     <Link to="https://soma.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.soma} className="" />
+                        <img src={pfImg.soma} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -340,7 +353,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://nfa.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.nfa} className="" />
+                        <img src={pfImg.nfa} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -354,7 +367,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://insports.or.kr/" target="_blank">
-                        <img src={pfImg.insports} className="" />
+                        <img src={pfImg.insports} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -367,7 +380,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://spobiz.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.spobiz} className="" />
+                        <img src={pfImg.spobiz} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -381,7 +394,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="https://spoex.com/" target="_blank">
-                        <img src={pfImg.spoex} className="" />
+                        <img src={pfImg.spoex} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -394,7 +407,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="https://cleansports.kspo.or.kr" target="_blank">
-                        <img src={pfImg.toto} className="" />
+                        <img src={pfImg.toto} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -408,7 +421,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://88olympic.kspo.or.kr/museum_new/index.asp" target="_blank">
-                        <img src={pfImg.museum} className="" />
+                        <img src={pfImg.museum} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -422,7 +435,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance res ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="https://css.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.css_kspo} className="" />
+                        <img src={pfImg.css_kspo} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -435,7 +448,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://88olympic.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.img88olympic} className="" />
+                        <img src={pfImg.img88olympic} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -448,7 +461,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://library.kspo.or.kr/" target="_blank">
-                        <img src={pfImg.library} className="" />
+                        <img src={pfImg.library} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -461,7 +474,7 @@ const List = () => {
                 </li>
                 <li className={`galList maintanance pc ${filterType === 'total' || filterType === 'maintanance' ||  filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="https://parktel.co.kr/" target="_blank">
-                        <img src={pfImg.parktel} className="" />
+                        <img src={pfImg.parktel} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -478,7 +491,7 @@ const List = () => {
                 {/* Pc version */}
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.moducoding.com" target="_blank">
-                        <img src={pfImg.modu} className="" />
+                        <img src={pfImg.modu} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -491,7 +504,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://9988hospital.co.kr" target="_blank">
-                        <img src={pfImg.img9988} className="" />
+                        <img src={pfImg.img9988} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -504,7 +517,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://dodreamps.com" target="_blank">
-                        <img src={pfImg.dodream} className="" />
+                        <img src={pfImg.dodream} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -517,7 +530,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.nowdc.kr" target="_blank">
-                        <img src={pfImg.bpnow} className="" />
+                        <img src={pfImg.bpnow} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -530,7 +543,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.cvrc.kr" target="_blank">
-                        <img src={pfImg.cvrc} className="" />
+                        <img src={pfImg.cvrc} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -543,7 +556,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.seoulista-ps.com" target="_blank">
-                        <img src={pfImg.listar} className="" />
+                        <img src={pfImg.listar} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -556,7 +569,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://yk5151.com" target="_blank">
-                        <img src={pfImg.yk} className="" />
+                        <img src={pfImg.yk} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -569,7 +582,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.omdi.co.kr" target="_blank">
-                        <img src={pfImg.omdi} className="" />
+                        <img src={pfImg.omdi} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -582,7 +595,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://naturalface.co.kr/index.php" target="_blank">
-                        <img src={pfImg.natural} className="" />
+                        <img src={pfImg.natural} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -595,7 +608,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://citygas.or.kr" target="_blank">
-                        <img src={pfImg.citygas} className="" />
+                        <img src={pfImg.citygas} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -608,7 +621,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.miraedosi.com" target="_blank">
-                        <img src={pfImg.miraedosi} className="" />
+                        <img src={pfImg.miraedosi} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -621,7 +634,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://24onnuri.com" target="_blank">
-                        <img src={pfImg.onnuri} className="" />
+                        <img src={pfImg.onnuri} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -634,7 +647,7 @@ const List = () => {
                 </li>
                 {/* <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.goyangmaum.org" target="_blank">
-                        <img src={pfImg.goyang} className="" />
+                        <img src={pfImg.goyang} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -647,7 +660,7 @@ const List = () => {
                 </li> */}
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.goodortho.co.kr" target="_blank">
-                        <img src={pfImg.goodsmile} className="" />
+                        <img src={pfImg.goodsmile} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -660,7 +673,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.koreavein.com" target="_blank">
-                        <img src={pfImg.central} className="" />
+                        <img src={pfImg.central} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -673,7 +686,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.misoskin.com" target="_blank">
-                        <img src={pfImg.miso} className="" />
+                        <img src={pfImg.miso} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -686,7 +699,7 @@ const List = () => {
                 </li>
                 <li className={`galList pc ${filterType === 'total' || filterType === 'pc' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.woomyun.or.kr" target="_blank">
-                        <img src={pfImg.woomyun} className="" />
+                        <img src={pfImg.woomyun} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -702,7 +715,7 @@ const List = () => {
                 {/* Mo Version */}
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://nfa.kspo.or.kr/mo/main/main.do?menu_seq=0" target="_blank">
-                        <img src={pfImg.nfa_m} className="" />
+                        <img src={pfImg.nfa_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -715,7 +728,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://spobiz.kspo.or.kr/mo/index.do" target="_blank">
-                        <img src={pfImg.spobiz_m} className="" />
+                        <img src={pfImg.spobiz_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -728,7 +741,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="https://www.sports.re.kr/mo/main/main.do?menu_seq=0" target="_blank">
-                        <img src={pfImg.kiss_m} className="" />
+                        <img src={pfImg.kiss_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">유지보수</span>
@@ -741,7 +754,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://m.9988hospital.co.kr" target="_blank">
-                        <img src={pfImg.img9988_m} className="" />
+                        <img src={pfImg.img9988_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -754,7 +767,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://m.nowdc.kr" target="_blank">
-                        <img src={pfImg.bpnow_m} className="" />
+                        <img src={pfImg.bpnow_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -767,7 +780,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://m.yk5151.vizensoft.com:92" target="_blank">
-                        <img src={pfImg.yk_m} className="" />
+                        <img src={pfImg.yk_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -780,7 +793,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://naturalface.co.kr/m/" target="_blank">
-                        <img src={pfImg.natural_m} className="" />
+                        <img src={pfImg.natural_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -793,7 +806,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://m.24onnuri.com" target="_blank">
-                        <img src={pfImg.onnuri_m} className="" />
+                        <img src={pfImg.onnuri_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -806,7 +819,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://m.goodortho.co.kr" target="_blank">
-                        <img src={pfImg.goodsmile_m} className="" />
+                        <img src={pfImg.goodsmile_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -819,7 +832,7 @@ const List = () => {
                 </li>
                 <li className={`galList mo ${filterType === 'total' || filterType === 'mo' ? 'block' : 'hidden'}`}>
                     <Link to="http://m.koreavein.com" target="_blank">
-                        <img src={pfImg.central_m} className="" />
+                        <img src={pfImg.central_m} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -835,7 +848,7 @@ const List = () => {
                 {/* Responsive */}
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://thebms.co.kr" target="_blank">
-                        <img src={pfImg.bms} className="" />
+                        <img src={pfImg.bms} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -848,7 +861,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://gotitcorp.com" target="_blank">
-                        <img src={pfImg.gotit} className="" />
+                        <img src={pfImg.gotit} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -861,7 +874,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://sunshinereport.co.kr" target="_blank">
-                        <img src={pfImg.img2bcnc} className="" />
+                        <img src={pfImg.img2bcnc} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -874,7 +887,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://jnsdream.com" target="_blank">
-                        <img src={pfImg.jns} className="" />
+                        <img src={pfImg.jns} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -887,7 +900,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.englishegg.co.kr" target="_blank">
-                        <img src={pfImg.egg} className="" />
+                        <img src={pfImg.egg} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축 참여</span>
@@ -899,7 +912,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.doojung.com" target="_blank">
-                        <img src={pfImg.doojung} className="" />
+                        <img src={pfImg.doojung} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -912,7 +925,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.kmt1.co.kr" target="_blank">
-                        <img src={pfImg.kmt} className="" />
+                        <img src={pfImg.kmt} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -925,7 +938,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://www.perkinelmer.co.kr" target="_blank">
-                        <img src={pfImg.perkin} className="" />
+                        <img src={pfImg.perkin} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -938,7 +951,7 @@ const List = () => {
                 </li>
                 <li className={`galList res ${filterType === 'total' ||  filterType === 'res' ? 'block' : 'hidden'}`}>
                     <Link to="http://sjmotor.vizensoft.com:92" target="_blank">
-                        <img src={pfImg.shinjung} className="" />
+                        <img src={pfImg.shinjung} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -954,7 +967,7 @@ const List = () => {
                 {/* Cafe24 */}
                 <li className={`galList cf ${filterType === 'total' ||  filterType === 'cf' ? 'block' : 'hidden'}`}>
                     <Link to="http://rabbitstamp.com" target="_blank">
-                        <img src={pfImg.rabbitstamp} className="" />
+                        <img src={pfImg.rabbitstamp} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -967,7 +980,7 @@ const List = () => {
                 </li>
                 <li className={`galList cf ${filterType === 'total' ||  filterType === 'cf' ? 'block' : 'hidden'}`}>
                     <Link to="http://a-tune.kr" target="_blank">
-                        <img src={pfImg.atune} className="" />
+                        <img src={pfImg.atune} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -980,7 +993,7 @@ const List = () => {
                 </li>
                 <li className={`galList cf ${filterType === 'total' ||  filterType === 'cf' ? 'block' : 'hidden'}`}>
                     <Link to="https://marsmark.com/" target="_blank">
-                        <img src={pfImg.marmark} className="" />
+                        <img src={pfImg.marmark} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -993,7 +1006,7 @@ const List = () => {
                 </li>
                 <li className={`galList cf ${filterType === 'total' ||  filterType === 'cf' ? 'block' : 'hidden'}`}>
                     <Link to="https://revewearing.com/" target="_blank">
-                        <img src={pfImg.reve} className="" />
+                        <img src={pfImg.reve} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>
@@ -1006,7 +1019,7 @@ const List = () => {
                 </li>
                 <li className={`galList cf ${filterType === 'total' ||  filterType === 'cf' ? 'block' : 'hidden'}`}>
                     <Link to="https://heradi-jewelry.com/" target="_blank">
-                        <img src={pfImg.heradi} className="" />
+                        <img src={pfImg.heradi} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">
                                 <span className="dot">사이트 구축</span>

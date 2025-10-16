@@ -139,7 +139,7 @@ const List = () => {
                     </Link>
                 </li>
                 <li className="total rs ">
-                    <Link to="https://https://btvtownad.com/" target="_blank">
+                    <Link to="https://btvtownad.com/" target="_blank">
                         <img src={pfImg.btv} className="imgClss" />
                         <span className="dataCover">
                             <span className="siteJob">

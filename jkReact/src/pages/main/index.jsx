@@ -3,6 +3,10 @@ import Lnb from '@/components/menu'
 import Curtain from '@/components/curtain'
 import Floating from '@/components/floating'
 
+import List from "@/components/list2.jsx";
+
+import Lcn from "@/components/lotto.jsx";
+
 function Page() {
   window.addEventListener('resize', function() {
       location.href = location.href;
@@ -18,6 +22,20 @@ function Page() {
       </div>
       
       <Curtain/>
+
+      <div className="portfolio">
+        <div className="w1200">
+          <div className="container">
+              <List></List>
+          </div>
+        </div>
+      </div>
+
+      <div className="lcnBox">
+        <div className="lcnContainer">
+            <Lcn></Lcn>
+        </div>
+      </div>
     </>
   )
 }

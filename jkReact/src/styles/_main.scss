@@ -7,6 +7,9 @@ html, body, #root {
 /*common*/
 .w1600 {
     width:100%; max-width:1600px; margin:0 auto;
+    @include media ('mobile') {
+        padding:0 20px;
+    }
 }
 
 .w1200 {
@@ -23,7 +26,7 @@ html, body, #root {
     .content {
         width:100%; height:100%; position:relative;
 
-        @include tab {
+        @include media ('tablet') {
             overflow:hidden;
         }
     }
@@ -35,14 +38,14 @@ html, body, #root {
 .header {
     position:absolute; top:10px; left:0; z-index:2; width:100%;
     
-    @include tab {
-        position:absolute; top:0; background:#000;
+    @include media ('pcl') {
+        position:absolute; top:0; padding: 0 20px;
     }
     div {
         a {
             display: block; padding:10px 0; box-sizing: border-box; width:140px;
             
-            @include tab {
+            @include media ('tablet') {
                 width:140px; margin:0 auto;
             }
         }
@@ -52,16 +55,20 @@ html, body, #root {
 .web_menu {
     position:absolute; bottom:230px; left:0; z-index:2; width:100%;
 
-    @include tab {
-        position:relative; bottom:auto; left:auto; z-index:2; width:100%;
+    @include media ('pcl') {
+        padding: 0 20px;
+    }
+
+    @include media ('tablet') {
+        position:relative; bottom:auto; z-index:2; width:100%;
     }
     
     ul {
         li {
             margin-top:30px; transition:all 0.4s; position:relative; width:max-content; margin-left:-500px; opacity:0; transition:all 1.5s;
 
-            @include tab {
-                margin:150px auto 0; width:100%;
+            @include media ('tablet') {
+                margin:150px auto 0; width:100%; text-align:center;
             }
 
             button {
@@ -84,7 +91,7 @@ html, body, #root {
             a {
                 display:inline-block; font-size:40px; font-weight:bold; color:#fff; transition:all 0.4s; position:relative;
 
-                @include tab {
+                @include media ('tablet') {
                     width:100%; text-align: center;
                 }
                 
@@ -99,12 +106,25 @@ html, body, #root {
                         width:100%;
                     }
 
-                    @include tab {
+                    @include media ('tablet') {
                         color: #fff !important;
 
                         &::after {
                             content:none;
                         }   
+                    }
+                }
+            }
+
+            &:last-of-type {
+                position:fixed; top:0; left:0;
+                width:50px; height:50px; background:#000; font-size:0; margin:0; z-index:999;
+
+                button {
+                    font-size:0; width:50px; height:50px; cursor:default;
+
+                    &::after {
+                        display:none;
                     }
                 }
             }
@@ -115,25 +135,26 @@ html, body, #root {
 .mainVisual {
     width:100%; height:100%; margin:0; padding:0; box-sizing:border-box; position:relative; background:#000; overflow:hidden; z-index:-1;
     
-    @include tab {
+    @include media ('tablet') {
         overflow:visible; position:absolute; bottom:0px;
     }
 
     .vCont {
         width:100%; height:100%; position:relative;
         
-        @include tab {
+        @include media ('tablet') {
             width:100%; height:auto; position:absolute; bottom:-50px;
         }
         
         img {
             position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); margin-left:600px; width:1630px; animation: floatingOver 1s linear 0s infinite alternate;
 
-            @include pc {
-                position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); margin-left:450px;
+            @include media ('pcl') {
+                position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); margin-left:250px;
+                width:100%;
                 animation: floatingPc 1s linear 0s infinite alternate;
             }
-            @include tab {
+            @include media ('tablet') {
                 position:relative; bottom:0px; left:50%; transform: translate(-50%,0); max-width:100%; margin:0px 0 0 70px;
                 animation: floatingTab 1s linear 0s infinite alternate;
             }

@@ -28,10 +28,19 @@ function Lnb () {
 		},200);
 	}
 
+	function goList() {
+		var pf = document.querySelector('.portfolio');
+		pf.classList.add('on');
+	}
+
+	function goLcn() {
+		var pf = document.querySelector('.lcnBox');
+		pf.classList.add('on');
+	}
+
 	const GnbData = [
 		// {txt:'Home', path:'/'},
-		{txt:'Portfolio', path:'/Portfolio'},
-		// {txt:'Elements', path:'/elements'},
+		{txt:'Portfolio', path:'/portfolio'},
 		// {txt:'Templates', path:'/templates'},
 		// {txt:'Popup', path:'/popup'},
 		// {txt:'PageList', path:'/pagelist'},
@@ -53,9 +62,24 @@ function Lnb () {
 					GnbData.map((list, index)=>{
 					const isActive = location.pathname === list.path;
 					if (list.path === "/") return null;
-					return <li key={index} className="mList" ><button className={`btn-depth1 ${isActive ? "active" : ""} `}  onClick={()=> movePage(list.path)}>{list.txt}</button></li>;
+					// return <li key={index} className="mList" >
+					// 			<button 
+					// 				className={`btn-depth1 ${isActive ? "active" : ""} `}  
+					// 				onClick={()=> movePage(list.path)}
+					// 			>
+					// 				{list.txt}
+					// 			</button>
+					// 		</li>;
+
+					return <li key={index} className="mList" >
+								<button onClick={()=> goList()}>
+									{list.txt}
+								</button>
+							</li>
 					})
 				}
+
+				<li className='mList'><button onClick={()=> goLcn()}>lcn</button></li>
 			</ul>
 		</div>
     </>

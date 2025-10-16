@@ -7,10 +7,12 @@ import routerConfig from "./routerConfig";
 // 레이아웃
 import LayoutMain from "@/layouts/LayoutMain";
 import LayoutPortfolio from "@/layouts/LayoutPortfolio";
+import LayoutLcn from "@/layouts/LayoutLcn";
 
 const layouts = {
   main: LayoutMain,
-  portfolio : LayoutPortfolio
+  portfolio : LayoutPortfolio,
+  lcn : LayoutLcn
 };
 
 function RouterDefault() {
@@ -18,7 +20,7 @@ function RouterDefault() {
     <Routes>
       {routerConfig.map((route) => {
 
-        const Layout = layouts[route.layout || "main"]; // 기본값은 'main'
+        const Layout = layouts[route.layout || "portfolio"]; // 기본값은 'main'
 
         return (
           <Route key={route.path} path={route.path} element={

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import List from "@/components/list.jsx";
+import List from "@/components/list2.jsx";
 import Filter from "@/components/filter.jsx";
 function Page() {
   return (

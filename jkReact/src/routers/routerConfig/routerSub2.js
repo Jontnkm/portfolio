@@ -1,7 +1,7 @@
 import { lazy } from "react";
 
 const routerConfig = [
-  // { path: "/sub2", component: lazy(() => import("@/pages/sub2/index")) },
+  { path: "/lcn", component: lazy(() => import("@/pages/lcn/index")), layout:"lcn" },
 ];
 
 export default routerConfig;  
